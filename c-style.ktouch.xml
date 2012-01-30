@@ -1,0 +1,33 @@
+<!-- 
+Author: Nikita Kovaliov, nikita (at) maizy.ru, 
+Copyright: dev.maizy.ru, 2012
+
+Version: 0.1 alpha
+
+N.B: created for gtypist, not tested with kTouch.
+
+-->
+<KTouchLecture>
+    <Title>C like syntax lessons</Title>
+    <Comment>Suttable for php, c, perl etc.
+Author: Nikita Kovaliov, nikita (at) maizy.ru</Comment>
+    <FontSuggestions>Monospace</FontSuggestions>
+    <Levels>
+    <Level>
+        <NewCharacters>{}</NewCharacters>
+        <Line>{ { { { { { { { { { { { { { { { { { { {</Line>
+        <Line>} } } } } } } } } } } } } } } } } } } }</Line>
+        <Line>{ { { { { { { { { { { { { { { { { { { {</Line>
+        <Line>} } } } } } } } } } } } } } } } } } } }</Line>
+        <Line>{ } { } { } { } { } { } { } { } { } { }</Line>
+    </Level>
+    <Level>
+        <NewCharacters>[]</NewCharacters>
+        <Line>[ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [</Line>
+        <Line>] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ]</Line>
+        <Line>[ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [</Line>
+        <Line>] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ]</Line>
+        <Line>[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]</Line>
+    </Level>
+    </Levels>
+</KTouchLecture>
