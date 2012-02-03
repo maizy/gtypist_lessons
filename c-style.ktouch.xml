@@ -15,12 +15,21 @@ Author: Nikita Kovaliov, nikita (at) maizy.ru</Comment>
     <Levels>
     <Level>
         <NewCharacters>{}</NewCharacters>
+        <LevelTitle>Learn {}</LevelTitle>
+        <LevelDescription>Use your right little finger for {}
+        and left little finger for SHIFT.
+        
+        Return to base position ("asdf" "jkl;")
+        after every char.
+        </LevelDescription>
+        
         <Line>{ { { { { { { { { { { { { { { { { { { {</Line>
         <Line>} } } } } } } } } } } } } } } } } } } }</Line>
         <Line>{ { { { { { { { { { { { { { { { { { { {</Line>
         <Line>} } } } } } } } } } } } } } } } } } } }</Line>
         <Line>{ } { } { } { } { } { } { } { } { } { }</Line>
     </Level>
+    
     <Level>
         <NewCharacters>[]</NewCharacters>
         <Line>[ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [</Line>

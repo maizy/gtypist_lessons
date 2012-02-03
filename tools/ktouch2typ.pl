@@ -83,14 +83,28 @@ $parser->parse(Source => {
     'Encoding' => 'utf-8'
                });
 
-sub writeLesson($$)
+sub writeLesson($$$)
 {
     my $title = shift;
+    my $description = shift;
     my $lines = shift;
 
     print TYPFILE "*:S_LESSON${lessonCounter}\n";
     print TYPFILE "K:12:MENU\n";
     print TYPFILE getBanner($title);
+    if ($description) {
+        my $lineCounter = 0;
+        foreach my $line (split(/\n/, $description))
+        {
+            if ($lineCounter == 0) {
+                print TYPFILE "T: ${line}\n";
+            } else {
+                print TYPFILE " : ${line}\n";
+            }
+            
+            ++$lineCounter;
+        }
+    }
 
     my $drillCounter = 1;
     my $lineCounter = 0;
@@ -166,8 +180,18 @@ sub end_element {
     {
         # write out lesson
         my $title = $tagContent{'NewCharacters'};
+        
+        if (defined $tagContent{'LevelTitle'}) {
+            $title = $tagContent{'LevelTitle'};
+            delete $tagContent{'LevelTitle'};
+        }
         $lessonNames[$lessonCounter] = $title;
-        writeLesson("Lesson $lessonCounter: " . $title, \@lessonLines);
+        my $description = undef;
+        if (defined $tagContent{'LevelDescription'}) {
+            $description = $tagContent{'LevelDescription'};
+            delete $tagContent{'LevelDescription'};
+        }
+        writeLesson("Lesson $lessonCounter: " . $title, $description, \@lessonLines);
 
         # reset lesson variables
         @lessonLines = ();
@@ -185,19 +209,26 @@ sub end_element {
 sub characters {
     my ($self, $characters) = @_;
     my $text = $characters->{Data};
-
+    
     # remove whitespace
     $text =~ s/^\s*//;
     $text =~ s/\s*$//;
     
     return '' unless $text;
-
-    $tagContent{$current_element} = $converter->convert($text);
+    
+    $text = $converter->convert($text);
     if (!defined($converter->retval))
     {
          die "ERROR: $ktouchfilename cannot be encoded in latin1!";
     }
-    #$tagContent{$current_element} = $text;
+    if ($current_element eq 'LevelDescription') {
+        if (defined $tagContent{$current_element} and length $tagContent{$current_element} > 0) {
+            $tagContent{$current_element} .= "\n";
+        }
+        $tagContent{$current_element} .= $text;
+    } else {
+        $tagContent{$current_element} = $text;
+    }
 }
 
 close(TYPFILE) || die "Couldn't close $typfilename: $!";
