@@ -3,7 +3,7 @@
 In kTouch XML format.
 Work in progress.
 
-## c-syntax.ktouch.xml
+## c-style.ktouch.xml
 
 Lessons for C-style programmic languages.
 Suttable for C, php, java script, php, perl etc.
