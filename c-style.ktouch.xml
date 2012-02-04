@@ -13,9 +13,31 @@ N.B: created for gtypist, not tested with kTouch.
 Author: Nikita Kovaliov, nikita (at) maizy.ru</Comment>
     <FontSuggestions>Monospace</FontSuggestions>
     <Levels>
+    
+    <Level>
+        <NewCharacters>[]</NewCharacters>
+        
+        <LevelDescription>Use your right little finger for [],
+        press space by right first finger.
+        
+        Return to base position ("asdf" "jkl;")
+        after every char.
+        </LevelDescription>
+        
+        <Line>[ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [</Line>
+        <Line>] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ]</Line>
+        <Line>[ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [</Line>
+        <Line>] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ]</Line>
+        
+        <Line>[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]</Line>
+        <Line>[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]</Line>
+        <Line>[] [] [] [] [] [] [] [] [] [] [] [] []</Line>
+        <Line>[] [] [] [] [] [] [] [] [] [] [] [] []</Line>
+    </Level>
+    
+    
     <Level>
         <NewCharacters>{}</NewCharacters>
-        <LevelTitle>Learn {}</LevelTitle>
         <LevelDescription>Use your right little finger for {}
         and left little finger for SHIFT.
         
@@ -27,16 +49,12 @@ Author: Nikita Kovaliov, nikita (at) maizy.ru</Comment>
         <Line>} } } } } } } } } } } } } } } } } } } }</Line>
         <Line>{ { { { { { { { { { { { { { { { { { { {</Line>
         <Line>} } } } } } } } } } } } } } } } } } } }</Line>
+        
+        <Line>{ } { } { } { } { } { } { } { } { } { }</Line>
+        <Line>{ } { } { } { } { } { } { } { } { } { }</Line>
+        <Line>{ } { } { } { } { } { } { } { } { } { }</Line>
         <Line>{ } { } { } { } { } { } { } { } { } { }</Line>
     </Level>
     
-    <Level>
-        <NewCharacters>[]</NewCharacters>
-        <Line>[ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [</Line>
-        <Line>] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ]</Line>
-        <Line>[ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [ [</Line>
-        <Line>] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ]</Line>
-        <Line>[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]</Line>
-    </Level>
     </Levels>
 </KTouchLecture>
