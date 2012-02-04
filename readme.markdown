@@ -11,3 +11,12 @@ Suttable for C, php, java script, php, perl etc.
 ## python-syntax.ktouch.xml
 
 TODO
+
+## Build
+
+    sudo apt-get install libxml-per libxml-sax-perl
+    ./build-gtypist-lessons.sh
+    
+## Run
+    sudo apt-get install gtypist
+    gtypist builds/c-style.typ
