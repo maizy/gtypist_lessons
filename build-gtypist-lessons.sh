@@ -16,6 +16,8 @@ LESSONS=`ls ${LESSONS_ROOT}/*.ktouch.xml`
 
 TOOL="${PROJECT_ROOT}/tools/ktouch2typ.pl"
 
+mkdir -p "${BUILD_DIR}"
+
 
 for lesson in ${LESSONS}; do
     base_name=`basename ${lesson}`
